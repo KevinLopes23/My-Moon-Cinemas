@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+
+#nome{
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    scale: 2;
+}
+
+
+#vip{
+    padding: 5px;
+    background-color: red;
+}
+
+#pagina-atual{
+    color: #333333;
+}
+
+#vip:hover{
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+#carrinho{
+    scale: 0.6;
+}
+
+nav{
+    display: flex;
+    background-color: #051119;
+    padding: 30px;
+    justify-content: space-evenly;
+    color: #EEEEEE;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+a{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+footer{
+    background-color: darkgray;
+    padding: 50px;
+}
+
+.ul-rodape{
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    margin: auto;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+}
+
+.rodape-copy{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    gap: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.rodape-2{
+    color: black;
+    font-size: small;
+}
+
+ol{
+    list-style: decimal-leading-zero;
+}
+
+#introducao strong{
+    color: #FFFFFF;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#introducao img{
+    max-width: 45%;
+    height: 80%;
+    border-radius: 20%;
+}
+
+#introducao{
+    height: 60vh;
+    display: flex;
+    background-color: #0c283a;
+    gap: 10em;
+    padding: 60px;
+    align-items: center;
+    justify-content: center;
+    line-height: 3em;
+}
+
+.link {
+    position: relative; /* Define a posição relativa para o contêiner */
+    display: inline-block; /* Permite que o contêiner se ajuste ao tamanho do conteúdo */
+    color: #a3a3a3; /* Cor do texto (opcional) */
+    text-decoration: none; /* Remove o sublinhado padrão do texto */
+}
+
+/* Estilizando a linha acima do texto */
+.link::before,
+.link::after {
+    content: ''; /* Adiciona conteúdo pseudo-elemento para a linha */
+    position: absolute; /* Posiciona o elemento de forma absoluta em relação ao contêiner pai */
+    width: 0; /* Inicialmente a largura da linha é zero */
+    height: 1px; /* Define a altura da linha */
+    background-color: white; /* Cor da linha */
+    visibility: hidden; /* Inicialmente oculta a linha */
+    transition: width 0.5s ease, visibility 0.3s ease; /* Adiciona transição suave para largura e visibilidade */
+}
+
+/* Linha acima do texto */
+.link::before {
+    top: -8px; /* Posiciona a linha no topo do contêiner pai */
+    right: 0; /* Posiciona a linha no final do contêiner */
+}
+
+.link:hover{
+    color: white;
+}
+
+/* Linha abaixo do texto */
+.link::after {
+    bottom: -8px; /* Posiciona a linha na parte inferior do contêiner pai */
+    left: 0; /* Posiciona a linha no início do contêiner */
+}
+
+/* Exibe as linhas ao passar o mouse sobre o texto */
+.link:hover::before,
+.link:hover::after {
+    visibility: visible; /* Torna as linhas visíveis */
+    width: 100%; /* Amplia a largura das linhas para 100% */
+}
